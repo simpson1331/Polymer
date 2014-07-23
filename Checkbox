@@ -1,0 +1,52 @@
+<link rel="import" href="../paper-checkbox/paper-checkbox.html">
+ 
+<polymer-element name="my-element">
+ 
+  <template>
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #paper_checkbox {
+        left: 120px;
+        top: 60px;
+        position: absolute;
+        font-weight: bold;
+      }
+      #paper_checkbox1 {
+        left: 120px;
+        top: 180px;
+        position: absolute;
+        font-weight: bold;
+      }
+      #paper_checkbox2 {
+        left: 120px;
+        top: 120px;
+        position: absolute;
+        font-weight: bold;
+      }
+      paper-checkbox.blue::shadow #ink[checked] {
+        color: rgb(66, 133, 244);
+      }
+      paper-checkbox.blue::shadow #checkbox.checked {
+        border-color: rgb(66, 133, 244);
+      }
+    </style>
+    <paper-checkbox label="Deselected" id="paper_checkbox" class="blue">
+    </paper-checkbox>
+    <paper-checkbox checked label="Selected" id="paper_checkbox2" class="blue"></paper-checkbox>
+    <paper-checkbox label="Disabled" disabled id="paper_checkbox1" class="blue"></paper-checkbox>
+  </template>
+ 
+  <script>
+ 
+    Polymer('my-element', {
+      Deselected: 'Deselected'
+    });
+ 
+  </script>
+ 
+</polymer-element>
